@@ -50,7 +50,7 @@ A full-stack Food Delivery App built using **Spring Boot (Java)** for the backen
    ```sql
    CREATE DATABASE fooddelivery;
    ```
-2. Ensure MySQL is running and update connection details in **application.properties**.
+2. Ensure MySQL is running and update the connection details in **application.properties**.
 3. Run the application to automatically create tables.
 
 ### Frontend Setup
@@ -66,8 +66,6 @@ A full-stack Food Delivery App built using **Spring Boot (Java)** for the backen
 ## Contributing
 Feel free to contribute by creating issues and pull requests. Suggestions are welcome!
 
-## License
-This project is licensed under the MIT License.
 
 ---
 ### Author: Manotosh Mandal 
