@@ -1,0 +1,228 @@
+/* Menu Hero Section */
+.menu-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/menu-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.menu-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Menu Filter */
+.menu-filter {
+    padding: 30px 0;
+    background-color: #f9f9f9;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* Add this new section for search container */
+.search-container {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    margin-top: -1px; /* Removes any gap between hero and search */
+}
+
+/* Update the existing search-bar styles */
+.search-bar {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 20px; /* Added padding for better mobile display */
+}
+
+/* Remove the old menu-filter section styles since we're replacing it */
+
+/* Menu Items */
+.menu-items {
+    padding: 50px 0;
+}
+
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ff6b6b;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover .item-img img {
+    transform: scale(1.05);
+}
+
+.veg-nonveg-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.veg-nonveg-icon.veg {
+    color: green;
+}
+
+.veg-nonveg-icon.non-veg {
+    color: red;
+}
+
+.item-info {
+    padding: 20px;
+}
+
+.item-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.item-info p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ff6b6b;
+}
+
+.add-to-cart {
+    padding: 8px 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #e05555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .menu-hero p {
+        font-size: 1rem;
+    }
+    
+    .filter-buttons {
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    overflow: auto !important;
+}

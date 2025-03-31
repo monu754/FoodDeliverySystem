@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Bites - Your Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Header (consistent with index.html) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Delish Bites</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="home.html" target="_blank">About Us</a></li>
+                    <li><a href="menu.html" class="active" target="_blank">Menu</a></li>
+                    <li>
+                        <a href="sign.html" class="cart-icon" id="cart-icon" target="_blank">
+                            <i class="fas fa-user-alt"></i>        
+                            Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" id="cart-icon" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Main Content -->
+    <main class="cart-container">
+        <div class="container">
+            <h1>Your Order</h1>
+            
+            <div class="cart-content">
+                <!-- Cart Items Section -->
+                <section class="cart-items">
+                    <h2><i class="fas fa-shopping-basket"></i> Cart Items</h2>
+                    <div class="items-list" id="cart-items-list">
+                        <!-- Items will be dynamically inserted here -->
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-basket"></i>
+                            <p>Your cart is empty</p>
+                            <a href="menu.html" class="btn-primary">Browse Menu</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Order Summary Section -->
+                <section class="order-summary">
+                    <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+                    <div class="summary-card">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-fee">₹30</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="cart-total">₹30</span>
+                        </div>
+                        
+                        <div class="delivery-address">
+                            <h3>Delivery Address</h3>
+                            <div class="address-form">
+                                <div class="form-group">
+                                    <label for="street">Street Address</label>
+                                    <input type="text" id="street" placeholder="Enter your street address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" placeholder="Enter your city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">PIN Code</label>
+                                    <input type="text" id="pin" placeholder="Enter PIN code">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (consistent with index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Delish Bites</h3>
+                    <p>Delivering delicious meals to your doorstep since 2023. Order now and enjoy the best dining experience at home.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html" target="_blank">About Us</a></li>
+                        <li><a href="menu.html" class="active" target="_blank">Menu</a></li>
+                        <li><a href="index.html" target="_blank">Home</a></li>
+                        
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@delishbites.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Delish Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Bites – Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Delish Bites</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="home.html" target="_blank">About Us</a></li>
+                    <li><a href="menu.html" class="active" target="_blank">Menu</a></li>
+                    <li>
+                        <a href="sign.html" class="cart-icon" id="cart-icon" target="_blank">
+                            <i class="fas fa-user-alt"></i>        
+                            Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" id="cart-icon" target="_blank">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-home">
+        <div class="container">
+            <h1>Delicious Food Delivered To Your Doorstep</h1>
+            <p>Experience the best culinary delights from top restaurants in your city, all from the comfort of your home.</p>
+            <div class="cta-buttons">
+                <a href="menu.html" class="cta-button cta-primary">Order Now</a>
+                <a href="#" class="cta-button cta-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Delish Bites?</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered in under 30 minutes or get it for free. We guarantee speedy service.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Fresh Food</h3>
+                    <p>We partner with the best restaurants to bring you fresh, high-quality meals every time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer service team is available round the clock to assist you with any queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Food</h3>
+                    <p>Browse our extensive menu and select your favorite dishes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Place Your Order</h3>
+                    <p>Add items to your cart and proceed to checkout.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Track your order in real-time as we prepare and deliver it.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Enjoy Your Meal</h3>
+                    <p>Savor delicious food in the comfort of your home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The food arrived hot and fresh, exactly as described. The delivery was faster than I expected. Will definitely order again!</p>
+                        <div class="customer-name">- Sarthak Vatsa</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>I love the variety of restaurants available. It's like having all my favorite places in one app. Highly recommended!</p>
+                        <div class="customer-name">- Shivank Kashyap</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The customer service is outstanding. They resolved my issue within minutes. Five stars for Delish Bites!</p>
+                        <div class="customer-name">- Priyanshu Vaibhav</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Items -->
+    <section class="popular-items">
+        <div class="container">
+            <h2 class="section-title">Our Popular Dishes</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="images/chickenburger.jpeg" alt="Cheeseburger">
+                    </div>
+                    <div class="food-info">
+                        <h3>Classic Cheeseburger</h3>
+                        <p>Juicy beef patty with cheese, lettuce, tomato, and special sauce</p>
+                        <div class="food-price">
+                            <span class="price">₹90</span>
+                            <button class="add-to-cart" data-id="1" data-name="Classic Cheeseburger" data-price="90" data-img="images/chickenburger.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="images/pizza.jpeg" alt="Pepperoni Pizza">
+                    </div>
+                    <div class="food-info">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Classic pizza with tomato sauce, mozzarella, and pepperoni</p>
+                        <div class="food-price">
+                            <span class="price">₹280</span>
+                            <button class="add-to-cart" data-id="2" data-name="Pepperoni Pizza" data-price="280" data-img="images/pizza.jpeg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="images/chicken.jpg" alt="Fried Chicken">
+                    </div>
+                    <div class="food-info">
+                        <h3>Crispy Fried Chicken</h3>
+                        <p>Golden fried chicken with our special seasoning blend</p>
+                        <div class="food-price">
+                            <span class="price">₹159</span>
+                            <button class="add-to-cart" data-id="3" data-name="Crispy Fried Chicken" data-price="159" data-img="images/chicken.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-menu">
+                <a href="menu.html" class="cta-button cta-primary">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Delish Bites</h3>
+                    <p>Delivering delicious meals to your doorstep since 2023. Order now and enjoy the best dining experience at home.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" target="_blank">Home</a></li>
+                        <li><a href="menu.html" class="active" target="_blank">Menu</a></li>
+                        <li><a href="home.html" target="_blank">About Us</a></li>
+                        
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Info</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@delishbites.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Delish Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Delivery Fee:</span>
+                <span>$2.99</span>
+            </div>
+            <div class="total-row total">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
