@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCart();
 
     addToCartButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
+        button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
             const name = button.getAttribute('data-name');
             const price = parseFloat(button.getAttribute('data-price'));
@@ -29,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateCart() {
-        if (!cartItemsContainer) return;
-
         cartItemsContainer.innerHTML = '';
         let subtotal = 0;
         cart.forEach(item => {
@@ -51,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>`;
         });
 
-        if (cartCount) cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
-        if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-        if (cartTotal) cartTotal.textContent = `$${(subtotal + 2.99).toFixed(2)}`;
+        cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+        cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+        cartTotal.textContent = `$${(subtotal + 2.99).toFixed(2)}`;
 
         document.querySelectorAll('.quantity-btn.minus').forEach(button => {
             button.addEventListener('click', () => {
@@ -90,33 +87,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function saveCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
-    }
-
-    // Menu filtering and search
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const menuItems = document.querySelectorAll('.menu-item');
-    const searchInput = document.getElementById('menu-search');
-
-    if (filterButtons.length > 0 && menuItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const category = button.dataset.category;
-                menuItems.forEach(item => {
-                    item.style.display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
-                });
-            });
-        });
-
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            menuItems.forEach(item => {
-                const itemName = item.querySelector('h3').textContent.toLowerCase();
-                const itemDesc = item.querySelector('p').textContent.toLowerCase();
-                item.style.display = itemName.includes(searchTerm) || itemDesc.includes(searchTerm) ? 'block' : 'none';
-            });
-        });
     }
 });
